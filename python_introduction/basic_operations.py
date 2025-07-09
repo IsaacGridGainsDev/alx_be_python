@@ -6,4 +6,4 @@ product = number1 * number2
 
 print(f'Addition of {number1} and {number2} is {sum}')
 print(f'Subtraction of {number1} and {number2} is {diff}')
-print(f'Multiplication of {number1} and {number2} is {produc}')
+print(f'Multiplication of {number1} and {number2} is {product}')

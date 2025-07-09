@@ -3,7 +3,7 @@ monthly_income = input("Enter your monthly income: ")
 monthly_expenses = input("Enter your total monthly expenses: ")
 
 #calculating monthly savings
-monthly_savings = int(monthly_income) - int(monthly_expenses)
+monthly_savings = float(monthly_income) - float(monthly_expenses)
 
 #performing simple interest on savings
 principal = monthly_savings * 12

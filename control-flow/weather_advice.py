@@ -1,5 +1,5 @@
 #Defining a list of predefined weather conditions
-user_input = input("What's the weather like today? (sunny/rainy/cold)")
+user_input = input("What's the weather like today? (sunny/rainy/cold):")
 
 #creating a match-case control flow gate
 if user_input == "sunny":

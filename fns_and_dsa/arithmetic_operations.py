@@ -1,19 +1,18 @@
 def perform_operation(num1, num2, operation):
-	match operation:
-		case '+' | 'add':
+		if operation == '+' or operation == 'add':
 			answer = num1 + num2
 			return answer
-		case '-' | 'subtract':
+		if operation == '-' or operation == 'subtract':
 			if num1 > num2:
 				answer = num1 - num2
 				return answer
 			else:
 				answer = num2 - num1
 				return answer
-		case '*' | 'multiply':
+		if operation == '*' or operation == 'multiply':
 			answer = num1 * num2
 			return answer
-		case '/' | 'divide':
+		if operation == '/' or operation == 'divide':
 			try:
 				answer = num1 / num2
 			except ZeroDivisionError:
@@ -21,6 +20,6 @@ def perform_operation(num1, num2, operation):
 				return float("inf")
 			else:
 				return answer
-		case _:
+		else:
 			print("invalid operation")
 			return float("nan")

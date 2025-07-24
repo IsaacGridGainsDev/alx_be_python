@@ -13,12 +13,10 @@ def perform_operation(num1, num2, operation):
 			answer = num1 * num2
 			return answer
 		if operation == '/' or operation == 'divide':
-			try:
-				answer = num1 / num2
-			except ZeroDivisionError:
-				print("cannot divide by zero! ")
-				return float("inf")
+			if num2 == 0:
+				print("cannot divide by zero")
 			else:
+				answer = num1 / num2
 				return answer
 		else:
 			print("invalid operation")

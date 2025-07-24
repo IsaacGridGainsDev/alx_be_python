@@ -15,6 +15,8 @@ def perform_operation(num1, num2, operation):
 		if operation == '/' or operation == 'divide':
 			if num2 == 0:
 				print("cannot divide by zero")
+			elif num1 == 0 and num2 == 0:
+				print("you are beaking the program")
 			else:
 				answer = num1 / num2
 				return answer

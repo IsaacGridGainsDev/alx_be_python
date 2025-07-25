@@ -12,7 +12,7 @@ def main():
 	try:
 		user_temp = float(input("Enter the temperature to convert: "))
 	except ValueError:
-		print("Invalid temperature. Please enter a numeric value")
+		print("Invalid temperature. Please enter a numeric value.")
 	temp_format = input("Is this temperature in Celsius or Fahrenheit? (C/F): ")
 	match temp_format:
 		case 'C' | 'c':
@@ -22,5 +22,5 @@ def main():
 			converted_temp = convert_to_celsius(user_temp)
 			print(f"{user_temp:.1f}F is {converted_temp:.4f}C")
 		case _:
-			print("invalid input")
+			print("Invalid temperature. Pleae enter a numeric value.")
 main()

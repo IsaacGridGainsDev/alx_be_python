@@ -6,6 +6,7 @@ class Student:
 		self.age = age
 		self.class_name = class_name
 		self.grade = {'math':0, 'eng':0, 'bio':0, 'chem':0, 'phy':0}
+		self.gpa = 0.0
 
 	def grades(self, grade):
 		self.grade = grade
@@ -13,10 +14,24 @@ class Student:
 
 	def performance(self):
 		total = sum(self.grade.values())
-		gpa = float(total / len(self.grade))
-		print(f"{self.name}'s grade is {gpa}")
+		self.gpa = float(total / len(self.grade))
+		print(f"{self.name}'s grade is {self.gpa}")
+		return self.gpa
 
+	def display_information(self):
+		if self.gpa == 0.0:
+			print("Grades have not been calculated yet")
+			self.performance()
+		print(
+			f"""
+				Name: {self.name}
+				Age: {self.age}
+				Class: {self.class_name}
+				GPA: {self.gpa}
+				Grades: """ + "\n".join([f" {subject}: {score}" for subject, score in self.grade.items()])			
+		)
 student1 = Student("Michael", 18, "Grade 12")
+student1.display_information()
 student1.grades(
 	{
 		'math': 60,
@@ -40,5 +55,6 @@ student2.grades(
 
 }
 )
+student2.display_information()
 student2.performance()
 		

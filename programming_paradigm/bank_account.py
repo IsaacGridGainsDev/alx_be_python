@@ -19,7 +19,7 @@ class BankAccount:
 			self.save_balance()
 			return True
 	def display_balance(self):
-		print(f"Current Balance: ${self.account_balance}")
+		print(f"Current Balance: ${self.account_balance:.2f}")
 	
 	def save_balance(self):
 		with open(self.file_path, 'w') as f:

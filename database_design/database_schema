@@ -1,0 +1,19 @@
+1. Books
+purpose: stores the book details
+primary key: book_isbn (unique integer for each book)
+
+2.Authors
+purpose: stores authors information
+primary key: author_id (auto_generated)
+
+3.Borrowers
+purpose: stores borrowers details
+primary key: borrower_id
+
+4. BookAuthors (Junction Table)
+purpose: resolves the many-to-many relationship between books and authors
+composite primary key: book_isbn, author_id
+
+5. BookBorrowers (Junction Table)
+purpose: tracks book loans -resolves many-to-many relationship between books and borrowers
+primary key: borrow_id

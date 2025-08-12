@@ -1,0 +1,19 @@
+1. Scalabilty:
+SQL is traditionally vertically scalable by moving to a more powerfull server, but horizontally, only more complex, modern distributed systems like CockroachDB, Yugabyte, can scale across multiple servers
+
+NoSQL can horizontally scale by design, and is ideal for huge datasets or high-throughput applications
+In summary, NoSQL wins in raw scaling(Vertically or horizontally) but SQL is catching up in newer architectures
+
+2. Data Consistency:
+SQL has stong ACID(Atomicity, Consistency, Isolation and Durability), and its strict schema enforces data integrity and prevents inconsistent states.
+
+NoSQL trades strict consistency for availability and partition tolerance in the BASE model(Basically Available, Soft-state, Eventually Consistent), and some NoSQL databases can be configured for strong consistency, but it impacts performance
+In summary, SQL wins in strict consistency.
+
+3. Query Complexity: 
+SQL is excellent for complex queries involving joins, aggregations, filtering across related tables, with highlt optimized query planners. Its weak spot, however, is found in very large unstructured datasets or humongous real-time writes can slow it down unless carefully indexed and tuned.
+
+NoSQL peforms best in simple, high-volume reads and writes, especially on unstructured or semi-structured data but is poorer at complex joins or relational queries, oftne requiring application-side processing. Furthermore, updates to deeply nested or distributed documents can be tricky
+In summary, SQL is best for complex analytical queries, whereas NoSQL excels in high-volume, flexible data ingestion
+
+Hot-Take: CockroachDB, a modern, distributed SQL DATABASE, can compete with NoSQL because it has strenghts of SQL's ACID(good for game states, leaderboards and transactions) and NoSQL-like horizontal scaling in being able to run across multiple servers), however, if the application is write-heavy, low-consistency tolerant, schema friendly and focused on time-series data, NoSQL triumphs here because it can skip strict consistency checks in favor of faster raw writes speeds, and no fixed schema, able to store varied events.

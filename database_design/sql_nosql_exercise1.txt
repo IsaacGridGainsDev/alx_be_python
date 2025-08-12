@@ -1,0 +1,11 @@
+A use case where a SQL database would be more suitable than a NoSQL database. and my reasoning
+
+A multi-year architectural research study tracing the performance of sustainable building materials across multiple test-sites.
+Why SQL?
+1. Relational complexity: Each material has multiple tests across multiple sites, under varying conditions; Each test is linked to specific researchers, dates and methodologies; Being able to answer questions such as "For {materials} tested in {climatic condition} climates by {Researcher}, what was the average {datapoint} retention after {time/date}"
+
+2. Data Integrity: Ensuring that every datapoint links to the correct source, researcher and methodology; SQL's foreign keys, and other features guarantee consistency
+
+3. Standardized schema over time: Field definitions are unlikely to change often, a direct benefit of SQL's strict schema and query power.
+
+However, this only works to answer emprical questions with specific logical outputs not subject to time. If the questions asked are "What is the latest infomation on X site from the last 5 minutes" it becomes a NoSQL solution.

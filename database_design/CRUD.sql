@@ -33,4 +33,7 @@ FROM Students AS S
 JOIN Orders AS O ON O.StudentID = S.StudentID
 WHERE S.FirstName = 'Jacob'; 
 
+UPDATE Orders SET Total = 700 WHERE StudentID = 3;
+
+DELETE FROM Orders WHERE Total < 300;
 
